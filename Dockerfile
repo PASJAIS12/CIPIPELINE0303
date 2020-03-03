@@ -7,6 +7,6 @@ LABEL MAINTAINER prashant.jaiswal@oracle.com
 RUN mkdir /code
 COPY Sample.sh /code/Sample.sh
 RUN chmod +x /code/Sample.sh
-RUN echo "encryption key is "$ENCRYPTION_KEY
+RUN echo "encryption key is " $ENCRYPTION_KEY
 ENTRYPOINT ["sh","/code/Sample.sh"]
 CMD ["/etc/hosts"]
